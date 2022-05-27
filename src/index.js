@@ -1,13 +1,47 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { applyMiddleware, compose, createStore } from "redux";
+import { Provider} from "react-redux";
+import { createLogger } from 'redux-logger';
+import thunk from "redux-thunk";
+import { BrowserRouter as Router, Route, Routes, Navigate, Switch } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.css";
+import AppRoutes from './AppRoutes';
+import AppFccWeather from './FCCWeather/AppFccWeather';
+
+// const saveState = (listWords) => {
+//   console.log(listWords)
+//   try {
+//     const listWordsString = JSON.stringify(listWords);
+//     localStorage.setItem('listWords', listWordsString);
+//   } catch(err) {
+//     console.log(err);
+//   }
+// };
+
+// const logger = createLogger({
+// });
+
+// const store = createStore(
+//   WordsReducer,
+//   compose(
+//     applyMiddleware(logger, thunk),
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//   )
+// );
+
+// store.subscribe(() => {
+//   saveState(store.getState().listWords);
+// });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <Provider store={ store }> */}
+      <AppRoutes />
+    {/* </Provider>   */}
   </React.StrictMode>
 );
 
