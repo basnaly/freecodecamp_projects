@@ -48,23 +48,23 @@ const styles = {
 
 const AppWikiViewerComponent = () => {
 
-    const [search, setSearch] = useState(true);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [input, setInput] = useState('');
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
     const changeSearch = () => {
-        setSearch(prev => !prev) //toggle
+        setIsSearchOpen(true)
     }
 
-    const handleKeyDown = (event) => {
+    const handleKeyDown = (event) => { // Enter
         if (event.key === 'Enter') {
             requestWikipedia()
         }
     }
 
     const reset = () => {
-        setSearch(true);
+        setIsSearchOpen(false);
         setInput('');
         setData([]);
     }
@@ -87,7 +87,7 @@ const AppWikiViewerComponent = () => {
             })
     }
     
-    const link = pageid => {
+    const link = pageid => { // open link programmaticaly
         let linked = `https://en.wikipedia.org/?curid=${pageid}`;
         window.open(linked, "_blank");
     }
@@ -105,13 +105,13 @@ const AppWikiViewerComponent = () => {
             </div>
             <div>
                 {
-                    search ? <FcSearch onClick={ changeSearch } />
+                    !isSearchOpen ? <FcSearch onClick={ changeSearch } />
                         :
                         <div className="position-relative">
                             <input type='text' style={styles.input} value={input}
                                 onChange={ e => setInput(e.target.value) }
-                                autoFocus
-                                onKeyDown={ handleKeyDown } />
+                                autoFocus // focus into input
+                                onKeyDown={ handleKeyDown } /> 
                             <CloseButton style={styles.button}
                                 onClick={ reset } />
                         </div>
