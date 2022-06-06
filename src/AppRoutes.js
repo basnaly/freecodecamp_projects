@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link, Routes, Navigate } from "react-ro
 import MeComponent from "./MeComponent";
 import AppFccWeather from "./FCCWeather/AppFccWeather";
 import AppWikiViewer from "./WikiViewer/AppWikiViewer";
+import AppTwitchStreamers from "./TwitchStreamers/AppTwitchStreamers";
 
 const styles = {
     home: {
@@ -36,6 +37,9 @@ const Home = () => {
                 <li>
                     <Link to='/app-wiki-viewer'>AppWikiViewer</Link>
                 </li>
+                <li>
+                    <Link to='/app-twitch'>AppTwitchStreamers</Link>
+                </li>
             </ul>
         </div>
     )
@@ -57,6 +61,7 @@ const AppRoutes = () => {
                     <Route path='/home' element={ <Home /> } />
                     <Route path='/app-fcc-weather' element={ <AppFccWeather /> } />
                     <Route path='/app-wiki-viewer' element={ <AppWikiViewer /> } />
+                    <Route path='/app-twitch' element={ <AppTwitchStreamers /> } />
                     <Route exact path="*" element={ <Navigate replace to="/home" /> } />
                 </Routes>
             </div>

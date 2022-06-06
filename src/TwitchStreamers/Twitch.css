@@ -1,0 +1,93 @@
+.parent-twc {
+    width: 100vw;
+}
+
+.paperOff-twc {
+    width: auto;
+    margin: 2px 15%;
+    background-color: slategray;
+    color: white;
+}
+
+.paperOn-twc {
+    width: auto;
+    margin: 2px 15%;
+    background-color: coral;
+}
+
+.img-twc {
+    width: 50px;
+    height: 50px;
+    margin: 3px 20px;
+}
+
+.title-twc {
+    margin: 15px;
+    width: 200px;
+}
+
+.description-twc {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 15px 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.frame-twc {
+    height: 20px;
+    margin: 2px 15%;
+    background-color: cornflowerblue;
+}
+
+.div-twc {
+    margin: 10px 15% 1px;
+    background-color: cornflowerblue !important;
+}
+
+.twitch-twc {
+    font-size: 30px;
+    color: gold;
+    padding: 20px;
+}
+
+.status-twc {
+    background-color: cornflowerblue;
+    padding: 6.5px;
+}
+
+.hover-twc {
+    width: 40px;
+    overflow: hidden;
+    transition: width ease-in-out 200ms;   
+}
+
+.hover-twc:hover {
+    width: 100px;
+}
+
+.active-twc {
+    width: 100px;
+}
+
+.spanAll-twc {
+    color: cornflowerblue;
+    margin: 2px;
+    background-color: azure;
+    text-shadow: 1px gray;
+}
+
+.spanOnline-twc {
+    color: coral;
+    margin: 2px;
+    background-color: azure;
+    text-shadow: 1px gray;
+}
+
+.spanOffline-twc {
+    color: gray;
+    margin: 2px;
+    background-color: azure;
+    text-shadow: 1px gray;
+}
