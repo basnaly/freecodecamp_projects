@@ -1,0 +1,29 @@
+/* AppHeaderParser */
+
+.parent-hdp {
+    background-color: cadetblue;
+    height: 100vh;
+}
+
+.res-hdp {
+    width: 600px;
+    text-align: center;
+}
+
+.data-hdp {
+    font-size: 24px;
+}
+
+/* HeaderParserComponent */
+
+.format-hdp {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.span-hdp {
+    font-size: 20px;
+    padding-left: 10px;
+    color: chartreuse;
+    text-shadow: 0.5px 0.5px black;
+}

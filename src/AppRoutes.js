@@ -6,6 +6,7 @@ import AppFccWeather from "./FCCWeather/AppFccWeather";
 import AppWikiViewer from "./WikiViewer/AppWikiViewer";
 import AppTwitchStreamers from "./TwitchStreamers/AppTwitchStreamers";
 import AppRecipeBox from "./RecipeBox/AppRecipeBox";
+import AppHeaderParser from "./HeaderParser/AppHeaderParser";
 
 const styles = {
     home: {
@@ -44,6 +45,9 @@ const Home = () => {
                 <li>
                     <Link to='/app-recipe-box'>AppRecipeBox</Link>
                 </li>
+                <li>
+                    <Link to='/app-header-parser'>AppHeaderParser</Link>
+                </li>
             </ul>
         </div>
     )
@@ -67,6 +71,7 @@ const AppRoutes = () => {
                     <Route path='/app-wiki-viewer' element={ <AppWikiViewer /> } />
                     <Route path='/app-twitch' element={ <AppTwitchStreamers /> } />
                     <Route path='/app-recipe-box' element={ <AppRecipeBox /> } />
+                    <Route path='/app-header-parser' element={ <AppHeaderParser /> } />
                     <Route exact path="*" element={ <Navigate replace to="/home" /> } />
                 </Routes>
             </div>
